@@ -1,0 +1,98 @@
+.rewiews {
+  &__title {
+    margin-bottom: 0;
+
+    @include max-width(b-lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    height: 500px;
+    background: linear-gradient(180deg, #DA3AB4 0%, #9B3AAD 100%);
+    box-shadow: 0px 6.66667px 66.6667px rgba(219, 58, 180, 0.4), inset 3.33333px -6.66667px 50px rgba(255, 255, 255, 0.25), inset -3.33333px 6.66667px 50px rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    padding: 40px 30px;
+
+    @include max-width(b-md) {
+      padding: 20px 15px;
+      height: 235px;
+    }
+  }
+
+  &__image {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-image: var(--bg-img);
+    background-size: cover;
+    margin-bottom: 20px;
+
+    @include max-width(b-md) {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 10px;
+    }
+  }
+
+  h3 {
+    @include font(18, 20, 400);
+    margin-bottom: 10px;
+
+    @include max-width(b-sm) {
+      @include font(12, 12, 400);
+    }
+  }
+
+  &__pos {
+    margin-bottom: 27px;
+
+    p {
+      white-space: nowrap;
+    }
+  }
+
+  &__pos,
+  &__text {
+    @include max-width(b-sm) {
+      p {
+        @include font(12, 14, 500);
+      }
+    }
+
+    @include max-width(b-md) {
+      margin-bottom: unset;
+    }
+  }
+
+  .swiper {
+    &.d {
+      @include max-width(b-xl) {
+        display: none !important;
+      }
+
+      .swiper-scrollbar {
+        display: none;
+      }
+    }
+
+    &.m {
+      display: none;
+
+      @include max-width(b-xl) {
+        display: flex !important;
+      }
+    }
+  }
+
+  .swiper {
+    padding-top: 60px;
+    padding-bottom: 150px;
+
+    @include max-width(b-lg) {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+  }
+}

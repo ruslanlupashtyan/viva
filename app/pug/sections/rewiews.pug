@@ -1,0 +1,48 @@
+- 
+  var rewiews = [
+    {
+      img: '../../images/feedback1.png',
+      name: 'антон гушилик',
+      pos: 'Співвласник компанії «Сито»',
+      text: 'Працюємо з Дмитром з 2018 року. До кожного замовлення відноситься з великою відповідальністю. '
+    },
+    {
+      img: '../../images/feedback2.png',
+      name: 'Яна Дімітрова',
+      pos: 'Керуюча «Гойра Груп»',
+      text: 'Працюємо з Дмитром з 2018 року. До кожного замовлення відноситься з великою відповідальністю. '
+    },
+    {
+      img: '../../images/feedback3.png',
+      name: 'Катерина дячинська',
+      pos: 'Власниця «TheTichers»',
+      text: 'Працюємо з Дмитром з 2018 року. До кожного замовлення відноситься з великою відповідальністю. '
+    },
+  ]
+section.section.rewiews
+  .rewiews__wrapper 
+    .container 
+      .rewiews__inner
+        h2.rewiews__title Що про нас #[br] кажуть люди
+        .swiper.d
+          ul.rewiews__list.swiper-wrapper
+            each item in rewiews
+              li.rewiews__item.swiper-slide
+                .rewiews__image(style=`--bg-img: url(${item.img})`)
+                h3= item.name 
+                .rewiews__pos
+                  p= item.pos
+                .rewiews__text 
+                  p= item.text
+          .swiper-scrollbar
+    .swiper.m
+      ul.rewiews__list.swiper-wrapper
+        each item in rewiews
+          li.rewiews__item.swiper-slide
+            .rewiews__image(style=`--bg-img: url(${item.img})`)
+            h3= item.name 
+            .rewiews__pos
+              p= item.pos
+            .rewiews__text 
+              p= item.text
+      .swiper-scrollbar

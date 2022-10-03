@@ -1,0 +1,95 @@
+-
+	var hero = 
+			{
+				title: 'Дизайн & Макетування',
+				url: 'images/design.png',
+				alt: 'hero',
+				text: [
+					'Наразі всім стало зрозуміло, що запорука успішної рекламної кампанії є її візуальна складова, а дизайн і його оформлення - це лице бренду, яке формує інтерес клієнтів. Ми реалізуємо комплексні дизайнерські та рекламні рішення, необхідні для успішного функціонування Вашого бізнесу та допомагають у рази підвищити його ефективність.',
+				]
+			}
+			grid = [
+				{
+					title: 'Створення креативів', 
+					link: '#',
+					url: '../images/creative.png',
+					alt: '',
+				},
+				{
+					title: 'Рекламна продукція', 
+					link: '#',
+					url: '../images/production.png',
+					alt: '',
+				},
+				{
+					title: 'Анімація. Моушн-дизайн', 
+					link: '#',
+					url: '../images/web-adv.png',
+					alt: '',
+				},
+				{
+					title: 'Web-дизайн', 
+					link: '#',
+					url: '../images/web-design.png',
+					alt: '',
+				},
+				{
+					title: 'Логотипи та брендбуки', 
+					link: '#',
+					url: '../images/brandbooks.png',
+					alt: '',
+				},
+				{
+					title: 'Упаковка та ектикетка', 
+					link: '#',
+					url: '../images/packages.png',
+					alt: '',
+				},
+			]
+doctype html
+html(lang="en")
+	include pug/sections/global/head
+	body
+		article
+			include pug/sections/global/header
+			include pug/sections/hero
+			section.section.page-text 
+				.page-text__wrapper 
+					.container 
+						.page-text__inner 
+							p Дизайн є одним з головних аспектів рекламної сфери, адже саме через рекламний макет Ваш бізнес контактуєте із потенційним клієнтом і за перші секунди візуального контакту людина повинна запам’ятати саме ту інформацію, яку потрібно було донести. Власне тут на перший план виходить не місце розміщення реклами, а вдало підібраний дизайн. Поєднання стратегічного підходу, креативності і досвіду – основна перевага нашого агентства. Ми маємо досвід, як комплексної розробки рекламних кампаній для великих клієнтів, так і дизайну окремих рекламних матеріалів та інших комунікаційних матеріалів для малого та середнього бізнесу.
+			section.section.grid 
+				.grid__wrapper 
+					.container 
+						.grid__inner 
+						ul.grid__content.grid-content.lists.center
+							li.grid-content__item 
+								h4.grid-content__title Недорого, але якісно
+								.grid-content__text
+									p упакуємо Ваш бренд або окрему рекламну акцію в сучасному дизайні, який всі точно like
+							li.grid-content__item 
+								h4.grid-content__title Творимо більше 7 років
+								.grid-content__text
+									p і знаємо точно, що потрібно для ефективної реклами Вашого бізнесу
+							li.grid-content__item 
+								h4.grid-content__title Індивідуальний підхід
+								.grid-content__text
+									p Оплачуйте тільки тоді, коли клієнт буде переходити на Ваш сайт або здійснюватиме дзвінок тощо
+							li.grid-content__item 
+								h4.grid-content__title Креативні рішення
+								.grid-content__text
+									p які привернуть увагу нових клієнтів та сформують якісно новий рівень сприйняття бренду
+							li.grid-content__item 
+								h4.grid-content__title Оперативне виконання
+								.grid-content__text
+									p «на вчора», адже ми знаємо на скільки важливі терміни запуску рекламних матеріалів
+							li.grid-content__item 
+								h4.grid-content__title Професійна підготовка
+								.grid-content__text
+									p будь-якого макету для друку, порізки, гравіювання, діджитал використання в інтернеті та інше
+			include pug/sections/decides
+			include pug/sections/rewiews
+			include pug/sections/feedback
+			include pug/sections/popups
+			include pug/sections/shadow
+			include pug/sections/global/footer

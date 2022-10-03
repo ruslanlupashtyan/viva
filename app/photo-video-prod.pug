@@ -1,0 +1,74 @@
+-
+	var hero = 
+			{
+				title: 'фото-відео-продакшн',
+				url: 'images/photo-video-prod-hero.png',
+				alt: 'hero',
+				text: [
+					'Найбільш актуальним методом донести про себе інформацію до аудиторії являється візуал – фото та відео контент, який справляє на аудиторію найкраще враження, викликає швидке сприйняття та запам’ятовування інформації.',
+					'Ми розуміємо, що клієнту важливо побачити продукт очима і чим якісніше реалізовано контент  – тим більше прикута увага аудиторії, а відповідно й відбувається зростання продажів! Наша команда має чималий досвід в організації зйомки фото контенту для різних сфер бізнесу, а також організовує зйомку та продакшн рекламних відеоматеріалів будь-якої складності.'
+				]
+			}
+doctype html
+html(lang="en")
+	include pug/sections/global/head
+	body
+		article
+			include pug/sections/global/header
+			include pug/sections/hero
+			section.section.grid 
+				.grid__wrapper 
+					.container 
+						.grid__inner 
+						ul.grid__content.grid-content.lists.center
+							li.grid-content__item 
+								h4.grid-content__title Візуалізуйся
+								.grid-content__text
+									p Приблизно 85% населення планети – люди з переважаючим візуальним сприйняттям
+							li.grid-content__item 
+								h4.grid-content__title Залучай клієнтів
+								.grid-content__text
+									p На 273% в середньому зростає зворотній зв’язок нових клієнтів після першого контакту з якісним контентом
+							li.grid-content__item 
+								h4.grid-content__title Зменшуй витрати
+								.grid-content__text
+									p Вартість взаємодії в рекламних кампаніях із якісним графічним контентом зменшуємо вдвічі
+							li.grid-content__item 
+								h4.grid-content__title Ставай ближче
+								.grid-content__text
+									p Відео контент на 164% збільшує розуміння продукту/послуги та спрощує їх продаж
+							li.grid-content__item 
+								h4.grid-content__title Продавай з 1-го погляду
+								.grid-content__text
+									p Фотоконтент формує думку споживача в перші 50 мілісекунд контакту та «закохує в себе» 
+							li.grid-content__item 
+								h4.grid-content__title Будь бажаним
+								.grid-content__text
+									p Подати правильно товар чи послуги – мистецтво, створюємо візуальні тренди правильно
+			section.section.advantages 
+				.advantages__wrapper 
+					.container 
+						.advantages__inner 
+							h2.advantages__title Основні переваги роботи з нами, це:
+							ul.advantages__list.list 
+								li.list__item(data-count="1") Аналіз ринку та найближчих конкурентів 
+								li.list__item(data-count="2") Організація «зйомки під ключ»
+								li.list__item(data-count="3") Генерування креативних ідей
+								li.list__item(data-count="4") Професійний підхід та надання комплексного вирішення питань
+								li.list__item(data-count="5") Завжди унікальний підхід до поставлених задач
+								li.list__item(data-count="6") Чітке дотримання домовленостей та термінів виконання
+			section.photo 
+				.photo__wrapper 
+					.container 
+						.photo__inner 
+							h2.photo__title фотоконтент
+			section.video 
+				.video__wrapper 
+					.container 
+						.video__inner 
+							h2.video__title відеоконтент
+			include pug/sections/rewiews
+			include pug/sections/feedback
+			include pug/sections/popups
+			include pug/sections/shadow
+			include pug/sections/global/footer

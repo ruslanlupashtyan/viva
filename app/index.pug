@@ -1,0 +1,250 @@
+- var title = 'Viva'
+- 
+	var grid = [
+		{
+			title: 'друкуємо все', 
+			link: '/print.html',
+			url: '../images/print-all.png',
+			alt: '',
+			types: [
+				{
+					title: 'Візитки та флаєри', 
+				},
+				{
+					title: 'Банери та плівка', 
+				},
+				{
+					title: 'Буклети та плакати', 
+				},
+				{
+					title: 'Меню та блокноти', 
+				},
+				{
+					title: 'Наклейки і ектикетки', 
+				},
+				{
+					title: 'Любе кіно ;)', 
+				},
+			]
+		},
+		{
+			title: 'зовнішня реклама', 
+			link: '/outdoor-adv.html',
+			url: '../images/outdoor-adv.png',
+			alt: '',
+			types: [
+				{
+					title: 'Білборди та сітілайти', 
+				},
+				{
+					title: 'Вивіски, об`ємні букви', 
+				},
+				{
+					title: 'Вітрини та фасади', 
+				},
+				{
+					title: 'Брендування авто', 
+				},
+				{
+					title: 'Банерна реклама', 
+				},
+				{
+					title: 'Штендери / спотикачі', 
+				},
+			]
+		},
+		{
+			title: 'реклама в інтернеті', 
+			link: 'web-adv.html',
+			url: '../images/web-adv.png',
+			alt: '',
+			types: [
+				{
+					title: 'Digital marketing', 
+				},
+				{
+					title: 'SMM & таргетинг', 
+				},
+				{
+					title: 'Реклама Google ads', 
+				},
+				{
+					title: 'Реклама в YouTube', 
+				},
+				{
+					title: 'Контекстна реклама', 
+				},
+				{
+					title: 'SEO просування сайту', 
+				},
+			]
+		},
+		{
+			title: 'дизайн та макетування', 
+			link: 'design.html',
+			url: '../images/design.png',
+			alt: '',
+			types: [
+				{
+					title: 'Створення креативів', 
+				},
+				{
+					title: 'Рекламна продукція', 
+				},
+				{
+					title: 'Анімація. Моушн-дизайн', 
+				},
+				{
+					title: 'Web-дизайн', 
+				},
+				{
+					title: 'Логотипи та брендбуки', 
+				},
+				{
+					title: 'Упаковка та етикетка', 
+				},
+			]
+		},
+		{
+			title: 'розробка сайтів', 
+			link: '/web-dev.html',
+			url: '../images/web-dev.png',
+			alt: '',
+			types: [
+				{
+					title: 'Landing page', 
+				},
+				{
+					title: 'Сайт візитка', 
+				},
+				{
+					title: 'Корпоративний сайт', 
+				},
+				{
+					title: 'Інтернет магазин', 
+				},
+				{
+					title: 'Аналітика & просування', 
+				},
+				{
+					title: 'Технічна підтримка', 
+				},
+			]
+		},
+		{
+			title: 'фото-відеопродакшн', 
+			link: '/photo-video-prod.html',
+			url: '../images/photo-video-prod.png',
+			alt: '',
+			types: [
+				{
+					title: 'Креативний підхід', 
+				},
+				{
+					title: 'Фото контенту бізнесу', 
+				},
+				{
+					title: 'Рекламні ролики', 
+				},
+				{
+					title: 'Іміджеві матеріали', 
+				},
+				{
+					title: 'Репортажні зйомки', 
+				},
+				{
+					title: 'Організація процесів', 
+				},
+			]
+		}
+	]
+	var works = [
+		{
+			url: '../images/last-works/1.png',
+			alt: '',
+		},
+		{
+			url: '../images/last-works/2.png',
+			alt: '',
+		},
+		{
+			url: '../images/last-works/3.png',
+			alt: '',
+		},
+	]
+doctype html
+html(lang="en")
+	include pug/sections/global/head
+	body
+		article
+			include pug/sections/global/header
+			section.section.main-hero#main
+				.main-hero__wrapper 
+					.container 
+						.main-hero__inner 
+							h1 креативне #[br]рекламне #[br]агентство
+							a.btn Спектр послуг
+							.rotated 
+								include images/svg/star.svg
+								include images/svg/star.svg
+								include images/svg/star.svg
+								include images/svg/star.svg
+			include pug/sections/decides
+			section.section.grid 
+				.grid__wrapper 
+					.container 
+						.grid__inner 
+						h2 ми робимо більше, #[br]ніж ви очікуєте
+						.grid__content.grid-content.lists
+							each item in grid 
+								.grid-content__item 
+									h4.grid-content__title=item.title
+									ul.grid-content__text.text-list
+										each p in item.types
+											li
+												a(href=item.link)
+													p= p.title
+			section.section.partners#partners
+				.partners__wrapper 
+					.container 
+						.partners__inner 
+							h2.partners__title Вони вже довірили #[br]нам свій бізнес
+							.partners__logos
+								.partners__logo
+									include images/svg/BartkaLogo.svg
+								.partners__logo
+									include images/svg/GuralniaLogo.svg
+								.partners__logo
+									include images/svg/GoiraLogo.svg
+								.partners__logo
+									include images/svg/GoiraGroupLogo.svg
+								.partners__logo
+									include images/svg/MoreliLogo.svg
+								.partners__logo
+									include images/svg/ShoShoLogo.svg
+								.partners__logo
+									include images/svg/TaistraLogo.svg
+								.partners__logo
+									include images/svg/PlyatskiLogo.svg
+								.partners__logo
+									include images/svg/OGHILogo.svg
+								.partners__logo
+									include images/svg/BlaBlaBarLogo.svg
+								.partners__logo
+									include images/svg/TheTichersLogo.svg
+								.partners__logo
+									include images/svg/BazisMedLogo.svg
+								.partners__logo
+									include images/svg/StarMaxLogo.svg
+								.partners__logo
+									include images/svg/BadChoperLogo.svg
+								.partners__logo
+									include images/svg/SytoLogo.svg
+								.partners__logo
+									include images/svg/BrokenBroLogo.svg
+			include pug/sections/works
+			include pug/sections/rewiews
+			include pug/sections/feedback
+			include pug/sections/popups
+			include pug/sections/global/footer
+			include pug/sections/main-shadow

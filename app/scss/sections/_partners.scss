@@ -1,0 +1,35 @@
+.partners {
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 50px;
+
+    @include max-width(b-xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include max-width(b-xl) {
+      row-gap: 20px;
+
+      svg {
+        width: 50px;
+        height: fit-content;
+
+      }
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+
+    &:hover {
+
+      path {
+        transition: linear 250ms;
+        fill: #DB3AB4;
+      }
+    }
+  }
+}

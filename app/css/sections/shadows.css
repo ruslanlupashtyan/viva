@@ -1,0 +1,43 @@
+.shadow {
+  position: absolute;
+  border-radius: 50%;
+  background: -o-radial-gradient(50% 50%, 50% 50%, #DB3AB4 14.37%, rgba(249, 21, 194, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #DB3AB4 14.37%, rgba(249, 21, 194, 0) 100%);
+  z-index: -1;
+}
+.shadow-1 {
+  width: 1396px;
+  height: 1396px;
+  top: -270px;
+  left: -1041px;
+}
+.shadow-2 {
+  width: 2080px;
+  height: 2080px;
+  top: -1900px;
+}
+.shadow-3 {
+  width: 3394px;
+  height: 3394px;
+  bottom: -2778px;
+  left: -366px;
+}
+.shadow-4 {
+  width: 2060px;
+  height: 2060px;
+  top: 1200px;
+  left: 400px;
+}
+.shadow-5 {
+  width: 2060px;
+  height: 2060px;
+  top: 1420px;
+  left: -1614px;
+}
+.shadow-6 {
+  width: 3174px;
+  height: 3174px;
+  top: -360px;
+  right: -2260px;
+}
+/*# sourceMappingURL=shadows.css.map */

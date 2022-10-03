@@ -1,0 +1,64 @@
+html {
+  background-color: #000;
+  // overflow-x: hidden;
+}
+
+body {
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+article {
+  overflow: hidden;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 50px;
+
+  @include max-width(b-md) {
+    margin-bottom: 30px;
+  }
+}
+
+.section {
+  padding-bottom: 150px;
+
+  @include max-width(b-md) {
+    padding-bottom: 60px;
+  }
+}
+
+.swiper {
+  padding-bottom: 30px;
+
+  .swiper-scrollbar {
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: #DA3AB4;
+  }
+
+  .swiper-notification {
+    background-color: #DB3AB4;
+  }
+}
+
+.btn-no-disable {
+  padding: 5px 20px;
+  background: linear-gradient(180deg, #DA3AB4 0%, #9B3AAD 100%);
+  border-radius: 30px;
+  color: #fff;
+  display: inline-block;
+
+  p {
+    @include font(18, 40, 700);
+
+    @include max-width(b-lg) {
+      @include font(16, 18, 500);
+    }
+  }
+}

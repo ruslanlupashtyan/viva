@@ -1,0 +1,39 @@
+.work-popup {
+  &__wrapper {
+    display: none;
+    position: fixed;
+    padding: 0 175px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000cc;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__image {
+    width: -webkit-fill-available;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 12%;
+    right: -120px;
+  }
+}

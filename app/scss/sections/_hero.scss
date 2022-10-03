@@ -1,0 +1,89 @@
+.hero {
+  &__wrapper {
+    padding-top: 150px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__image {
+    @include max-width(b-lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image,
+  &__text {
+    width: calc(50% - 24px);
+
+    @include max-width(b-lg) {
+      width: 100%;
+    }
+  }
+}
+
+.main-hero {
+  &__wrapper {
+    position: relative;
+    height: 100vh;
+    background-image: url(../../images/main-hero.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 100px 0;
+
+    @include max-width(b-lg) {
+      // background-position-y: calc(100% - 150px);
+      background-position-y: 260px;
+    }
+  }
+
+  &__inner {
+    padding: 80px 0;
+
+    @include max-width(b-lg) {
+      padding: 0;
+    }
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 45px;
+
+    @include max-width(b-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .rotated {
+    margin-top: 110px;
+
+    @include max-width(b-lg) {
+      position: absolute;
+      bottom: 100px;
+      right: calc(50% - 90px);
+    }
+
+    svg {
+      margin-right: 30px;
+      animation: rotate 5s infinite linear;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "DTW";
+  src: url("../fonts/DrukTextWide/DRUKTEXTWIDE-MEDIUM.TTF") format("TrueType");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT";
+  src:
+    url("../fonts/TTfirs/TTFirs-Medium.ttf") format("TrueType"),
+    url("../fonts/TTfirs/TTFirs-Medium.woff") format("woff"),
+    url("../fonts/TTfirs/TTFirs-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TT";
+  src:
+    url("../fonts/TTfirs/TTFirs-Bold.ttf") format("TrueType"),
+    url("../fonts/TTfirs/TTFirs-Bold.woff") format("woff"),
+    url("../fonts/TTfirs/TTFirs-Bold.woff2") format("woff2");
+  font-weight: 700;
+}

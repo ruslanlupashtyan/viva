@@ -1,0 +1,163 @@
+.feedback {
+  &__inner {
+    display: flex;
+
+    @include max-width(b-lg) {
+      display: block;
+    }
+  }
+}
+
+.form,
+.contacts {
+  width: 50%;
+
+  @include max-width(b-lg) {
+    width: 100%;
+  }
+}
+
+.form {
+  padding: 30px 75px 70px 75px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+
+  @include max-width(b-lg) {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    color: #000;
+    margin-bottom: 60px;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-width(b-md) {
+      display: block;
+    }
+  }
+
+  &__area {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 42px;
+      content: '';
+      width: 100%;
+      height: 1px;
+      display: block;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  // input:not([type='submit']) {
+  input {
+    margin-bottom: 40px;
+    width: calc(49% - 20px);
+
+    @include max-width(b-md) {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    &::placeholder {
+      padding-bottom: 10px;
+    }
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+
+    @include max-width(b-md) {
+      margin-top: 30px;
+    }
+  }
+
+  input,
+  textarea {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    @include font(16, 22, 700);
+    font-family: "TT";
+  }
+
+  textarea {
+    line-height: 40px;
+    width: 100%;
+    height: 85px;
+    resize: none;
+  }
+}
+
+.contacts {
+  margin-bottom: 70px;
+  padding-left: 155px;
+
+  @include max-width(b-xl) {
+    padding-left: 60px;
+  }
+
+  @include max-width(b-lg) {
+    padding-left: 30px;
+  }
+
+  @include max-width(b-lg) {
+    padding: unset;
+  }
+
+
+  .phones,
+  .address {
+    margin-bottom: 55px;
+
+    @include max-width(b-lg) {
+      margin-bottom: 30px;
+    }
+
+    p,
+    a {
+      font-family: 'DTW';
+      @include font(20, 30, 400);
+      color: #fff;
+      display: block;
+      margin-bottom: 25px;
+
+      @include max-width(b-lg) {
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include max-width(b-md) {
+        @include font(14, 18, 400);
+      }
+    }
+  }
+
+
+  .social {
+    display: flex;
+
+    a {
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include max-width(b-lg) {
+        margin-right: 35px;
+      }
+    }
+  }
+}

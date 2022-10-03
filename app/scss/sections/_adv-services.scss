@@ -1,0 +1,122 @@
+.adv-services {
+  .item {
+    margin-bottom: 150px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    @include max-width(b-lg) {
+      margin-bottom: 60px;
+    }
+
+    &__wrapper {
+      overflow-x: scroll;
+    }
+
+    &__title {
+      @include font(45, 80, 400);
+
+      @include max-width(b-lg) {
+        @include font(18, 25, 400);
+      }
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: var(--bg-img);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: top;
+      background-size: 35%;
+
+      @include max-width(b-lg) {
+        background-image: none;
+      }
+
+      &.reverse {
+        background-position-x: left;
+      }
+    }
+
+    &__text {
+      width: 60%;
+
+      p.text {
+        margin-bottom: 40px;
+
+        @include max-width(b-lg) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &.reverse {
+        align-self: flex-end;
+      }
+
+      &.seo {
+        width: 50%;
+
+        @include max-width(b-lg) {
+          width: 100%;
+        }
+      }
+
+      @include max-width(b-lg) {
+        width: 100%;
+      }
+    }
+
+    &__list {
+      width: 70%;
+      min-width: 900px;
+
+      &.reverse {
+        // align-self: end;
+        justify-content: end;
+        margin-left: auto;
+
+        @include max-width(b-lg) {
+          justify-content: start;
+        }
+
+        .item__button {
+          margin-right: 0;
+          margin-left: 20px;
+        }
+      }
+
+      &.wide {
+        width: 100%;
+        min-width: 1400px;
+      }
+    }
+
+    &__image {
+      display: none;
+
+      @include max-width(b-lg) {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    &__button {
+      margin-right: 20px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      @include font(24, 40, 500);
+      text-transform: none;
+      text-decoration: underline;
+    }
+  }
+}

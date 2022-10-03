@@ -1,0 +1,31 @@
+section.section.feedback#contacts
+  .feedback__wrapper 
+    .container 
+      h2.feedback__title Давайте розвивати #[br] ваш бізнес разом
+      .feedback__inner
+        form.form(action="")
+          h4.form__title Розкажіть про Вашу ідею - Що Вас цікавить?
+          .form__inputs
+            input(type="text", placeholder="Ваше ім'я")
+            input#phone-numb(type="text", placeholder="099 123 45 67") 
+          .form__area
+            textarea(name="", cols="30", rows="2", placeholder="Розкажіть про Вашу ідею")
+          input.btn(type="submit", value="Надіслати")
+        .contacts 
+          h2.contacts__title наші контакти
+          .phones
+            a(href="tel:+380993383855") 099 338 38 55 
+            a(href="tel:+380963383855") 096 338 38 55
+          .address
+            p вул. Оренбузька, 7а
+            p Позаду готелю "Гранд Роял"
+          .social 
+            a(href="") 
+              include ../../images/svg/inst.svg
+            a(href="") 
+              include ../../images/svg/fb.svg
+            a(href="") 
+              include ../../images/svg/tg.svg
+            a(href="") 
+              include ../../images/svg/wa.svg
+          

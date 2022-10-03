@@ -1,0 +1,177 @@
+:root {
+  --cont-sm: 540px;
+  --cont-md: 720px;
+  --cont-lg: 960px;
+  --cont-xl: 1140px;
+  --cont-2xl: 1320px;
+  --cont-3xl: 1400px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+$bps: (
+  'b': 320px,
+  'b-xs': 375px,
+  'b-sm': 576px,
+  'b-md': 768px,
+  //mobile
+  'b-lg': 992px,
+  'b-xl': 1200px,
+  'b-2xl': 1400px,
+  'b-3xl': 1920px) !default;
+
+
+
+@mixin min-width($bp) {
+  @if map-has-key($bps, $bp) {
+    @media (min-width: map-get($bps, $bp)) {
+      @content
+    }
+  }
+}
+
+;
+
+@mixin max-width($bp) {
+  @if map-has-key($bps, $bp) {
+    @media (max-width: map-get($bps, $bp)) {
+      @content
+    }
+  }
+}
+
+;
+
+
+
+// MAX WIDTH
+@include max-width(b-3xl) {}
+
+@include max-width(b-2xl) {}
+
+@include max-width(b-xl) {}
+
+@include max-width(b-lg) {}
+
+@include max-width(b-md) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@include max-width(b-sm) {
+  .container {
+    padding: 0 35px;
+  }
+}
+
+
+// MIN WIDTH
+@include min-width(b-sm) {
+  .container {
+    max-width: var(--cont-sm)
+  }
+}
+
+@include min-width(b-md) {
+  .container {
+    max-width: var(--cont-md)
+  }
+
+  .flex-md {
+    display: flex;
+  }
+}
+
+
+@include min-width(b-lg) {
+  .container {
+    max-width: var(--cont-lg)
+  }
+
+  .none-lg {
+    display: none;
+  }
+
+  .block-lg {
+    display: block;
+  }
+
+  .flex-lg {
+    display: flex;
+  }
+}
+
+
+@include min-width(b-xl) {
+  .container {
+    max-width: var(--cont-xl)
+  }
+
+  .block-xl {
+    display: block;
+  }
+}
+
+@include min-width(b-2xl) {
+  .container {
+    max-width: var(--cont-2xl)
+  }
+
+  .block-2xl {
+    display: block;
+  }
+}
+
+
+@include min-width(b-3xl) {
+  .container {
+    max-width: var(--cont-3xl)
+  }
+
+  .block-3xl {
+    display: block;
+  }
+}
+
+
+
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-evenly {
+  justify-content: space-evenly;
+}

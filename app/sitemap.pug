@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+    include pug/sections/global/head.pug
+    body
+        - var pages = ['index', 'print', 'outdoor-adv', 'web-adv', 'design', 'web-dev', 'photo-video-prod'];
+        .sitemap
+            p.sitemap__count="Page count: "+pages.length
+            .sitemap__items
+                each page in pages
+                    a(class="sitemap__item" href=page+".html")= page
+    script(src="js/main.min.js")

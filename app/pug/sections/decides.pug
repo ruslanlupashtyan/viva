@@ -1,0 +1,15 @@
+section.section.grid#services
+  .grid__wrapper 
+    .container 
+      .grid__inner 
+        h2 ефективні рішення, #[br]які допоможуть #[br]вашому бізнесу
+        .grid__content.grid-content.frames
+          each item in grid 
+            a(href=item.link).grid-content__item
+              .animate-bg
+                .circle
+                .fill
+              .content
+                h4.grid-content__title=item.title 
+                .grid-content__image
+                  img.grid-content__image(src=item.url, alt=item.alt)

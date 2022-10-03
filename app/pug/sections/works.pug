@@ -1,0 +1,10 @@
+section.section.works#works
+  .works__wrapper 
+    .container 
+      h2.works__title Наші останні #[br]роботи
+    .works__slider.swiper 
+      ul.works__list.swiper-wrapper
+        each work in works 
+          li.works__item.swiper-slide
+            img(src=work.url, alt=work.alt)
+      .swiper-scrollbar

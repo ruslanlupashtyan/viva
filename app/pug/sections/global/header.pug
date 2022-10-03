@@ -1,0 +1,46 @@
+-
+  var nav = [
+    {
+      title: 'Головна', 
+      link: '/index.html#main'
+    }, 
+    {
+      title: 'Послуги', 
+      link: '/index.html#services'
+    }, 
+    {
+      title: 'Клієнти', 
+      link: '/index.html#partners'
+    },
+    {
+      title: 'Роботи', 
+      link: '/index.html#works'
+    },
+    {
+      title: 'Контакти', 
+      link: '/index.html#contacts'
+    }
+  ]
+
+header.header
+  .header__wrapper 
+    .container 
+      .header__inner.flex.ai-center
+        .header__logo 
+          include ../../../images/svg/logo.svg
+        ul.header__menu.flex
+          each item in nav 
+            li.header__link
+              a(href=item.link)= item.title
+        .header__hamburger#hamburger
+          span
+          span
+          span
+.mobile-menu
+  .mobile-menu__wrapper 
+    .container 
+      .mobile-menu__inner
+        ul.mobile-menu__list
+          each item in nav  
+            li.mobile-menu__link 
+              a(href=item.link)= item.title

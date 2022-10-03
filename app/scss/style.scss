@@ -1,0 +1,35 @@
+//libs
+@import "components/swiper";
+
+//general
+@import "components/framework";
+@import "normalize";
+@import "func";
+@import "variables";
+@import "font";
+@import "type";
+@import "global";
+
+// components
+// @import "components/swiper";
+@import "components/buttons";
+
+// sections
+@import "sections/global/header";
+@import "sections/global/footer";
+@import "sections/hero";
+@import "sections/grid";
+@import "sections/partners";
+@import "sections/rewiews";
+@import "sections/feedback";
+@import "sections/works";
+@import "sections/popups";
+@import "sections/text";
+@import "sections/adv-services";
+@import "sections/product";
+@import "sections/advantages";
+@import "sections/shadows";
+
+
+// pages
+@import "pages/sitemap";

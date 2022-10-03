@@ -1,0 +1,11 @@
+section.section.hero 
+  .hero__wrapper 
+    .container 
+      .hero__inner 
+        h1.hero__title= hero.title
+        .hero__descr.flex-lg.ai-center.jc-between
+          .hero__image
+            img(src=hero.url, alt=hero.alt)
+          .hero__text
+            each p in hero.text 
+              p= p
